@@ -1,6 +1,0 @@
----
-host: phl-42
-datacenter:         # here is the nested mapping
-  location: Philadelphia      # Collection
-  cab: 13                     # Collection
-  cab_unit: 3                 # Collection

@@ -1,0 +1,9 @@
+---
+host: phl-42
+datacenter:         # here is the mapping of sequences
+  - location: Philadelphia      # Sequence of mapping
+    cab: 13                     # Sequence of mapping
+    cab_unit: 3                 # Sequence of mapping
+roles:
+  - webserver                   # List
+  - wp_database                 # List

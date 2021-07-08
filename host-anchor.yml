@@ -1,0 +1,26 @@
+---                              # Initialise the directive/document
+host: phl-42
+datacenter:         # here is the mapping of sequences
+  - location: Philadelphia      # Simple scalar
+    cab: "13"                     # Text scalar newline (\n) or escape sequence is allowed
+    cab_unit: '3'                 # Text scalar newline (\n) or escape sequence isn't allowed
+roles: &wphosts                 # Define anchor
+  - webserver                   # List
+  - wp_database                 # List
+downtime_sch: |                 # New line is preserved. Identation is must. It is a multiline scalar
+  2018-10-31 - kernel upgrade
+  2019-02-02 - security fix
+comments: >                     # New line will not be preserved. Identation is must. It is a multiline scalar
+  Experiencing high I/O
+  Since 2018-10-01.
+  Currently investigating.
+
+    Dhaval                      # List is possible but only with the second identation
+    Durgesh
+---                             # Initialise the second directive/document
+host: phl-43
+datacenter:                     # here is the mapping of sequences
+  - location: Philadelphia      # Simple scalar
+    cab: "13"                   # Text scalar newline (\n) or escape sequence is allowed
+    cab_unit: '4'               # Text scalar newline (\n) or escape sequence isn't allowed
+roles: *wphosts                 # Referance anchor

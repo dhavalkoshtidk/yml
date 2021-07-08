@@ -1,0 +1,8 @@
+---
+host: phl-42
+ datacenter:
+   location: Philadelphia
+   cab: 13
+ roles:
+  - web
+  - dns
